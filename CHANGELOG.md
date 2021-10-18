@@ -1,6 +1,38 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 9.0.5
+
+### Fixes
+
+* #482 Fix timing of `KeyboardTrackingView` callbacks.
+* #483 KeyboardTrackingView causes a small space under bottom-style view
+
+## 9.0.4
+
+* #471 Xcode 13 issue - Enum cases with associated values cannot be marked potentially unavailable with '@available'
+* Improve colors for dark mode.
+
+## 9.0.3
+
+### Fixes
+
+* #467 Lower or equal level window's views disappear upon hide
+* #466 Alert not shown after Biometry check
+* #465 Fix broken Carthage build. The Carthage build was broken due to the `iMessageDemo` project's use of CocoaPods and the automatically generated `SwiftMessages` framework scheme created by CocoaPods. The podfile was modified to delete this scheme, but Carthage users may need to run `pod install` on the `iMessagesDemo` project, if they have CocoaPods installed, or manually delete the `iMessageDemo/Pods/Pods.xcodeproj/xcuserdata` folder.
+
+## 9.0.2
+
+### Fixes
+
+* Fix app extension compile error when using CocoaPods.
+
+## 9.0.1
+
+### Fixes
+
+* #455 #458 Restore key window after message is interacted with. When a message becomes the key window, such as if the user interacts with the message, iOS does not automatically restore the previous key window when the message is dismissed. SwiftMessages has some logic in `WindowViewController` to restore the key window. This change makes that logic more robust.
+
 ## 9.0.0
 
 ### Features
